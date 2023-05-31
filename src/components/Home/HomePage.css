@@ -1,0 +1,7 @@
+.container-box {
+  width: 80%;
+  background-color: transparent;
+  position: relative;
+  z-index: 9;
+}
+

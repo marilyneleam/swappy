@@ -2,6 +2,7 @@
 	display: flex;
 	padding: 5px 0 5px 50px;
 	border-bottom: 1px solid black;
+	margin-bottom: 20px;
 }
 
 .left {
@@ -39,6 +40,7 @@
 	width: 120px;
 	height: 25px;
 	border-radius: 5px;
+	border-style: none;
 }
 
 .sign {

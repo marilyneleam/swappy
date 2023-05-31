@@ -13,7 +13,7 @@ function Home() {
                 <div className="front-left">
                     <h1 className="brand">Swappy</h1>
                     <h2 className="tag">Makes you Happy !</h2>
-                    <p className='intro'>
+                    <p className="intro">
                         Dans un monde où la durabilité et la consommation
                         responsable sont devenues des préoccupations majeures,
                         de nouvelles approches économiques émergent pour
@@ -24,8 +24,8 @@ function Home() {
                     </p>
 
                     <div className="front-btn">
-                        <button className='deposit'>Déposer une annonce</button>
-                        <button className='start'>Voir l'article</button>
+                        <button className="deposit">Déposer une annonce</button>
+                        <button className="start">Voir l'article</button>
                     </div>
                 </div>
                 <div className="front-right">
