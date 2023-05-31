@@ -11,6 +11,7 @@ import AddProduct from './components/AddProduct/AddProduct'
 
 
 function App() {
+    console.log(localStorage.getItem('userId'))
     return (
         <div>
             <Header />

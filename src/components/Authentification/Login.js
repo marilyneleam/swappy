@@ -21,7 +21,23 @@ function Login() {
 
     axios
       .post("http://localhost:3001/login", formData)
-      .then((response) => console.log(response))
+      .then(
+        (response) =>
+          console.log(response.data) &&
+          localStorage.setItem("userId", response.data.id) &&
+          window.location.replace("/")
+      )
+      .catch((error) => {
+        console.error("There was an error!", error);
+      });
+
+    axios
+      .get("http://localhost:3001/user/" + localStorage.getItem("userId"))
+      .then(
+        (response) =>
+          localStorage.setItem("userName", response.data.nickname) &&
+          console.log(console.log(response.data.nickname))
+      )
       .catch((error) => {
         console.error("There was an error!", error);
       });

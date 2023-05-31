@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-
 function AddProduct() {
   const [name, setName] = useState();
   const [description, setDescription] = useState();
@@ -33,8 +32,8 @@ function AddProduct() {
       description: description,
       pictures: [picture],
       opened: true,
-      userId: "123456789",
-      offersId: ["dzdzdzdz"],
+      userId: localStorage.getItem("userId"),
+      offersId: [],
     };
 
     console.log(formData);
