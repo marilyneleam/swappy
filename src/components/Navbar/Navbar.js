@@ -18,11 +18,11 @@ function Navbar() {
         <Link to="/">
           <img className="logo" src={Logo} alt="logo"></img>
         </Link>
-
+		
         <input
           className="search"
           type="text"
-          placeholder="Recherche"
+          placeholder="Non fonctionnel"
           onChange={handleChange}
           value={searchInput}
         />
