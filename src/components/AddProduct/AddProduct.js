@@ -24,7 +24,7 @@ function AddProduct() {
   };
 
   const handleSubmit = () => {
-    if (name == "" && description == "" && !picture) {
+    if (name === "" && description === "" && !picture) {
       return;
     }
 
@@ -57,7 +57,7 @@ function AddProduct() {
       <div className="body">
         <div className="auth">
           <label for="auth">
-            <p className="label-auth">Nom de l'objet</p>
+            <p className="label-prod">Nom de l'objet</p>
           </label>
           <input
             type="text"
@@ -69,7 +69,7 @@ function AddProduct() {
         </div>
         <div className="auth">
           <label for="auth">
-            <p className="label-auth">Description de l'objet</p>
+            <p className="label-prod">Description de l'objet</p>
           </label>
           <input
             type="text"
@@ -81,7 +81,7 @@ function AddProduct() {
         </div>
         <div className="auth">
           <label for="auth">
-            <p className="label-auth">Url de l'image de l'objet</p>
+            <p className="label-prod">Url de l'image de l'objet</p>
           </label>
           <input
             type="text"
