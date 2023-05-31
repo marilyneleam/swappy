@@ -4,6 +4,7 @@ import Login from './components/Authentification/Login'
 import Layout from './components/Layout/Layout'
 import Register from './components/Authentification/Register'
 import HomePage from './components/Home/HomePage'
+import AddProduct from './components/AddProduct/AddProduct'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
                 <Route path="register" element={<Register />}></Route>
                 <Route path="login" element={<Login />}></Route>
 				<Route path="home" element={<HomePage />}></Route>
+				<Route path="addproduct" element={<AddProduct />}></Route>
             </Routes>
         </div>
     )
