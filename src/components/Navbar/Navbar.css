@@ -1,0 +1,54 @@
+.navbar {
+	display: flex;
+	padding: 5px 0 5px 50px;
+	border-bottom: 1px solid black;
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	width: 80%;
+}
+
+.logo {
+	width: 35px;
+	height: 40px;
+	padding-right: 30px;
+}
+
+.search {
+	width: 80%;
+	height: 30px;
+	margin-right: 40px;
+	background-color: #ebebeb;
+	border: none;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+.right {
+	width: 20%;
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 50px;
+	align-items: center;
+
+}
+
+.btn {
+	width: 120px;
+	height: 25px;
+	border-radius: 5px;
+}
+
+.sign {
+	background-color: #506ae3;
+	color: white;
+	margin-right: 20px;
+}
+
+.log {
+	background-color: #171717;
+	color: white;
+}
+

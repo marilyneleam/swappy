@@ -1,0 +1,39 @@
+.articles {
+	margin-left: 50px;
+	margin-right: 50px;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 15px;
+}
+
+.item {
+	margin-bottom: 20px;
+}
+
+.itempix {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.itemcity {
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.itempseudo, .itemname, .itemcity {
+	font-size: medium;
+	padding: 0;
+}
+
+.itemname {
+	margin: 10px 0 10px 0 ;
+}
+
+.itempseudo {
+	margin: 0 0 20px 0;
+}
+
+.btn-item {
+	width: 100%;
+	height: 35px;
+}
