@@ -1,6 +1,8 @@
 import "./AddProduct.css";
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 function AddProduct() {
   const [name, setName] = useState();
@@ -92,9 +94,9 @@ function AddProduct() {
       </div>
 
       <div className="footer">
-        <a href="http://localhost:3000/">
+        <Link to="/">
           <button className="btn btn-cancel">Annuler</button>
-        </a>
+        </Link>
         <div className="btn-right">
           <button className="btn btn-login" onClick={handleSubmit}>
             Ajouter le produit
