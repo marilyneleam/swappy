@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import Logo from '../../assets/logo.png'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
     const [searchInput, setSearchInput] = useState('')
@@ -26,8 +27,12 @@ function Navbar() {
             </div>
 
             <div className="right">
-                <button className="btn sign">S'inscrire</button>
-                <button className="btn log">Se connecter</button>
+                <Link to="/register">
+                    <button className="btn sign">S'inscrire</button>
+                </Link>
+                <Link to="/login">
+                    <button className="btn log">Se connecter</button>
+                </Link>
             </div>
         </div>
     )
