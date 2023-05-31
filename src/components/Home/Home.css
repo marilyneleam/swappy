@@ -82,7 +82,6 @@
     background-color: #506ae3;
 	padding: 7px;
 	height: 35px;
-
 }
 
 .start {
@@ -92,4 +91,9 @@
     border-style: none;
     color: white;
     background-color: #171717;
+}
+
+.color {
+	text-decoration: none;
+	color: white;
 }
