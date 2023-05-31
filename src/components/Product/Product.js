@@ -2,6 +2,10 @@ import './Product.css'
 import Photo from '../../assets/photo.png'
 
 function Product() {
+
+	const id = 14;
+
+
     return (
         <div className="product">
             <div className="prod-grid">
@@ -91,13 +95,27 @@ function Product() {
                     </div>
                 </div>
                 <div className="prod-bot-right">
-					<div className='card'>
-						<div className='profile'>
-							<img src={Photo}></img>
-							<p>Sandra</p>
-						</div>
-					</div>
-				</div>
+                    <div className="card">
+                        <div className="profile">
+                            <img src={Photo} alt="pix"></img>
+                            <p className="pro-name">Sandra</p>
+                        </div>
+                        <div className="see">
+                            {
+                                //Check if message failed
+                                id === '14' ? (
+                                    <button className="prop-btn">
+                                        Proposer une enchère
+                                    </button>
+                                ) : (
+                                    <button className="see-btn">
+                                        Voir les enchères
+                                    </button>
+                                )
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

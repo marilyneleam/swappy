@@ -18,6 +18,7 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	border-radius: 10px;
 }
 
 .prod-grid-col-2 {
@@ -55,7 +56,7 @@
 	margin-left: 20px;
 	font-size: small;
 	text-align: justify;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 	border-bottom: 1px solid black;
 }
 
@@ -85,4 +86,54 @@
 
 .cat {
 	font-size: small;
+}
+
+.card {
+	margin-top: 20px;
+	margin-left: 60px;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	background-color:#d9d9d9;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	padding: 20px 10px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.pro-name {
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+.see {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+.see>button {
+	width:80%;
+}
+
+.see-btn {
+	background-color: #171717;
+	color: white;
+	border-style: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+.prop-btn {
+	background-color: #506ae3;
+	color: white;
+	border-style: none;
+	padding: 5px 10px;
+	border-radius: 5px;
 }

@@ -1,7 +1,8 @@
 import React from 'react'
-import HomeImg from "../../assets/home.jpg"
-import MapImg from "../../assets/map.png"
+import HomeImg from '../../assets/home.jpg'
+import MapImg from '../../assets/map.png'
 import './Home.css'
+import { Link } from 'react-router-dom'
 
 function Home() {
     return (
@@ -25,7 +26,7 @@ function Home() {
 
                     <div className="front-btn">
                         <button className="deposit">Déposer une annonce</button>
-                        <button className="start">Voir l'article</button>
+                            <button className="start">Voir les articles</button>
                     </div>
                 </div>
                 <div className="front-right">
