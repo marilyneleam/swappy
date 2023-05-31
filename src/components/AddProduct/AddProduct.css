@@ -16,11 +16,16 @@ input {
   padding: 10px;
   width: 700px;
 }
-
+.auth {
+  margin-bottom: 12px;
+}
 .label-auth {
   margin-top: 10px;
   margin-bottom: 5px;
   margin-left: 20px;
+}
+.picture {
+	margin-bottom: 12px;
 }
 
 .label-auth50 {
@@ -51,7 +56,18 @@ input {
   color: white;
   border: 1px solid #ced4da;
   height: 30px;
-  cursor: pointer;
+}
+
+img {
+  max-width: 300px;
+}
+
+.image-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
 .btn-cancel {
