@@ -7,6 +7,7 @@ import Product from './components/Product/Product'
 import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
 import Items from './components/Items/Items'
+import AddProduct from './components/AddProduct/AddProduct'
 
 
 function App() {
@@ -20,6 +21,11 @@ function App() {
                 <Route path="/" element={<HomePage />}></Route>
                 <Route path="/item" element={<Product />}></Route>
                 <Route path="/items" element={<Items />}></Route>
+                <Route path="/" element={<Layout />}></Route>
+                <Route path="register" element={<Register />}></Route>
+                <Route path="login" element={<Login />}></Route>
+				<Route path="home" element={<HomePage />}></Route>
+				<Route path="addproduct" element={<AddProduct />}></Route>
             </Routes>
         </div>
     )
