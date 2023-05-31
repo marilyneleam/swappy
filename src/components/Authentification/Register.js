@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Register() {
   const [pseudo, setPseudo] = useState();
@@ -11,7 +13,7 @@ function Register() {
   const [dateBirth, setDateBirth] = useState();
   const [cp, setCp] = useState();
   const [city, setCity] = useState();
-  const [phone, setPhone] = useState();
+  const [phoneNumber, setPhoneNumber] = useState();
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -33,32 +35,62 @@ function Register() {
     if (id === "confirmPassword") {
       setConfirmPassword(value);
     }
-    if (id === "dateofbirth") {
-      setDateBirth(value);
-    }
     if (id === "cp") {
       setCp(value);
     }
     if (id === "city") {
       setCity(value);
     }
-    if (id === "phone") {
-      setPhone(value);
-    }
   };
 
   const handleSubmit = () => {
-    console.log(
-      firstName,
-      lastName,
-      email,
-      password,
-      confirmPassword,
-      dateBirth,
-      cp,
-      city,
-      phone
-    );
+    if (password !== confirmPassword) {
+      alert("Les mots de passe ne correspondent pas");
+      return;
+    }
+
+    if (
+      pseudo == "" ||
+      firstName == "" ||
+      lastName == "" ||
+      email == "" ||
+      password == "" ||
+      dateBirth == "" ||
+      cp == "" ||
+      city == "" ||
+      phoneNumber == ""
+    ) {
+      return;
+    }
+
+    const currentDate = new Date();
+
+    const phoneNum = parseInt(phoneNumber);
+    const codePostal = parseInt(cp);
+
+    console.log(currentDate);
+    console.log(dateBirth);
+
+    let formData = {
+      nickname: pseudo,
+      firstname: firstName,
+      lastname: lastName,
+      email: email,
+      password: password,
+      age: 30,
+      postalcode: codePostal,
+      city: city,
+      phonenumber: phoneNum,
+    };
+
+    console.log(formData);
+
+    axios
+      .post("http://localhost:3001/user", formData)
+      .then((response) => console.log(response))
+      .catch((error) => {
+        console.error("There was an error!", error);
+      });
   };
 
   return (
@@ -77,7 +109,7 @@ function Register() {
             type="text"
             value={pseudo}
             onChange={(e) => handleInputChange(e)}
-            id="psedo"
+            id="pseudo"
             placeholder="Veuillez saisir un pseudonyme"
           />
         </div>
@@ -161,6 +193,7 @@ function Register() {
             max="2005-05-31"
             value={dateBirth}
             className="form-input"
+            onChange={(e) => setDateBirth(e.target.value)}
           />
         </div>
         <div className="adress">
@@ -199,7 +232,8 @@ function Register() {
             id="phone"
             name="phone"
             type="tel"
-            value={phone}
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
             placeholder="01 23 45 67 89"
             className="form-input"
           />
@@ -207,12 +241,11 @@ function Register() {
       </div>
 
       <div className="footer">
-        <a href="http://localhost:3000/">
+        <Link to="/">
           <button className="btn btn-cancel">Annuler</button>
-        </a>
+        </Link>
 
         <div className="btn-right">
-          <button className="btn btn-create">Se connecter</button>
           <button className="btn btn-login" onClick={handleSubmit}>
             Créer un compte
           </button>
