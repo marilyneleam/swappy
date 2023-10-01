@@ -50,15 +50,15 @@ function Register() {
     }
 
     if (
-      pseudo == "" ||
-      firstName == "" ||
-      lastName == "" ||
-      email == "" ||
-      password == "" ||
-      dateBirth == "" ||
-      cp == "" ||
-      city == "" ||
-      phoneNumber == ""
+      pseudo === "" ||
+      firstName === "" ||
+      lastName === "" ||
+      email === "" ||
+      password === "" ||
+      dateBirth === "" ||
+      cp === "" ||
+      city === "" ||
+      phoneNumber === ""
     ) {
       return;
     }

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 
 import Logo from "../../assets/logo.png";
 import "./Navbar.css";
@@ -28,7 +27,7 @@ function Navbar() {
         />
       </div>
       <div className="right">
-        {user != "" ? (
+        {user !== "" ? (
           <>
             <Link to="/register">
               <button className="btn sign">S'inscrire</button>

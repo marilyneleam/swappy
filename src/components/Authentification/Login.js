@@ -8,7 +8,7 @@ function Login() {
   const [password, setPassword] = useState();
 
   const handleSubmit = () => {
-    if (email == "" || password == "") {
+    if (email === "" || password === "") {
       return;
     }
 

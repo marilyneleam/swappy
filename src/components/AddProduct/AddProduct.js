@@ -7,7 +7,6 @@ function AddProduct() {
   const [name, setName] = useState();
   const [description, setDescription] = useState();
   const [picture, setPicture] = useState();
-  const [userId, setUserId] = useState();
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
